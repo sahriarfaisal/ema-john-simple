@@ -9,9 +9,11 @@ import {
   Link
 } from "react-router-dom";
 
-import Review from './components/Review/review';
+import Review from './components/Review/Review';
 import Inventory from './components/Inventory/inventory';
 import Notfound from './components/Notfound/Notfound';
+import Product from './components/Product/Product';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
 function App() {
   return (
@@ -30,6 +32,9 @@ function App() {
           </Route>
           <Route exact path="/">
             <Shop></Shop>
+          </Route>
+          <Route path="/product/:productKey">
+            <ProductDetails></ProductDetails>
           </Route>
           <Route path="*">
             <Notfound></Notfound>
